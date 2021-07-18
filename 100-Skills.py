@@ -150,6 +150,46 @@ def get_address():
 
 print(get_address())
 
+from collections import Counter, defaultdict
 
+res = Counter("Apple is a fruit")
+print(list(res.keys()))
+print(list(res.values()))
+print(res)
+print(type(res))
+
+my_dict = defaultdict(str)
+my_dict['name'] = 'leon'
+my_dict['age'] = '12'
+print('res = ', my_dict['weight'])
+
+
+class OddNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+
+    def __next__(self):
+        x = self.a + 2
+        self.a += 2
+        return x
+
+
+odd_numbers_obj = OddNumbers()
+iterator = iter(odd_numbers_obj)
+print(next(iterator))
+print(next(iterator))
+print(next(iterator))
+
+import pandas
+
+print(pandas)
+
+# sort()对原始列表进行排序，sorted()返回一个全新的已排序列表
+
+import uuid
+
+print(uuid.uuid1())
+print(uuid.uuid4())
 
 
